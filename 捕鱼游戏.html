@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+
+			#water{
+				width:1050px;
+				height:500px;
+				/*background-color: deepskyblue;*/
+				background-image: url(img/water.jpg);
+				position: relative;
+			}
+			#fish{
+				width:30px;
+				height:20px;
+				border-radius:20%;
+/*				background-color: burlywood;*/
+			}
+			#fish1{
+				position: absolute;
+				top: 300px;
+				left:480px;
+			}
+			#fish2{
+				position: absolute;
+				top: 200px;
+				left:550px;
+			}
+			#fish3{
+				position: absolute;
+				top: 100px;
+				left:500px;
+			}
+			#fish4{
+				position: absolute;
+				top: 320px;
+				left:200px;
+			}
+			#fish5{				
+				position: absolute;
+				top: 450px;
+				left:100px;
+			}
+			#fish6{				
+				position: absolute;
+				top: 250px;
+				left:300px;
+			}
+			#fish7{				
+				position: absolute;
+				top: 350px;
+				left:440px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="water">
+			<div id="container">
+				<img id="fish1" src="img/fish1.png" />
+				<img id="fish2"id="fish2" src="img/fish2.png" />
+				<img id="fish3"id="fish3" src="img/fish3.png" />
+				<img id="fish4"id="fish4" src="img/fish4.png" />
+				<img id="fish5"id="fish5" src="img/fish5.png" />
+				<img id="fish6"id="fish6" src="img/fish6.png" />
+				<img id="fish7"id="fish7" src="img/fish7.png" />
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			var count=100;
+			if(count>0){
+				water.onclick = function(){
+					count-=500;
+					confirm("你失手了,目前得分："+count);
+				}/*点到鱼依然会起作用?*/
+				fish1.onclick = function(){
+					count-=500;
+					confirm("你被鲨鱼吃了,目前得分："+count);
+				}
+				fish2.onclick = function(){
+					count+=100;
+					confirm("你逮到鱼了,目前得分："+count);
+				}
+				fish3.onclick = function(){
+					count+=100;
+					confirm("你逮到鱼了,目前得分："+count);
+				}
+				fish4.onclick = function(){
+					count+=100;
+					confirm("你逮到鱼了,目前得分："+count);
+				}
+				fish5.onclick = function(){
+					count+=100;
+					confirm("你逮到鱼了,目前得分："+count);
+				}
+				fish6.onclick = function(){
+					count+=100;
+					confirm("你逮到鱼了,目前得分："+count);
+				}
+				fish7.onclick = function(){
+					count+=100;
+					confirm("你逮到鱼了,目前得分："+count);
+				}
+			}else if(count==0){
+					confirm("游戏结束,目前得分："+count);
+					/*break;*/
+				}
+			
+			
+			
+			$(document).ready(function(){
+				setInterval(function(){
+					// 随机位移
+/*						var left = Math.ceil(Math.random() * 800);
+						var top = Math.ceil(Math.random() * 400);*/
+					$("#fish1").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 500);
+				}, 30)
+				
+				setInterval(function(){
+					$("#fish2").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 700);
+				}, 600)
+				
+				setInterval(function(){
+					$("#fish3").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 700);
+				}, 800)
+				setInterval(function(){
+					$("#fish4").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 700);
+				}, 700)
+				setInterval(function(){
+					$("#fish5").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 700);
+				}, 700)
+				setInterval(function(){
+					$("#fish6").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 700);
+				}, 900)
+				setInterval(function(){
+					$("#fish7").animate({left:Math.ceil(Math.random() * 800) + "px", top:Math.ceil(Math.random() * 400) + 'px'}, 700);
+				}, 800)
+			})
+		</script>
+	</body>
+</html>
